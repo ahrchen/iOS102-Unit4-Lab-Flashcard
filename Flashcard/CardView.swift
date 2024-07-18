@@ -15,6 +15,9 @@ struct CardView: View {
 
     let card: Card
     
+    var onSwipedLeft: (() -> Void)?
+    var onSwipedRight: (() -> Void)?
+    
     var body: some View {
         ZStack {
             ZStack {
@@ -55,6 +58,20 @@ struct CardView: View {
                 let translation = gesture.translation // <-- Get the current translation value of the gesture. (CGSize with width and height)
                 print(translation) // <-- Print the translation value
                 offset = translation
+            }.onEnded { gesture in  // <-- onEnded called when gesture ends
+                
+                if gesture.translation.width > swipeThreshold { // <-- Compare the gesture ended translation value to the swipeThreshold
+                    print("👉 Swiped right")
+                    onSwipedRight?()
+                } else if gesture.translation.width < -swipeThreshold {
+                    print("👈 Swiped left")
+                    onSwipedLeft?()
+                } else {
+                    print("🚫 Swipe canceled")
+                    withAnimation(.bouncy) {
+                        offset = .zero
+                    }
+                }
             }
         )
         
