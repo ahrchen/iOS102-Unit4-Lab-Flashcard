@@ -11,6 +11,8 @@
 		EE1D5C7E2C49BFF000A6789E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D5C7D2C49BFF000A6789E /* ContentView.swift */; };
 		EE1D5C802C49BFF200A6789E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1D5C7F2C49BFF200A6789E /* Assets.xcassets */; };
 		EE1D5C832C49BFF200A6789E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1D5C822C49BFF200A6789E /* Preview Assets.xcassets */; };
+		EE1D5C8A2C49C78400A6789E /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D5C892C49C78400A6789E /* CardView.swift */; };
+		EE1D5C8C2C49C7B100A6789E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D5C8B2C49C7AB00A6789E /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		EE1D5C7D2C49BFF000A6789E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE1D5C7F2C49BFF200A6789E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE1D5C822C49BFF200A6789E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE1D5C892C49C78400A6789E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EE1D5C8B2C49C7AB00A6789E /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				EE1D5C7B2C49BFF000A6789E /* FlashcardApp.swift */,
 				EE1D5C7D2C49BFF000A6789E /* ContentView.swift */,
+				EE1D5C892C49C78400A6789E /* CardView.swift */,
+				EE1D5C8B2C49C7AB00A6789E /* Card.swift */,
 				EE1D5C7F2C49BFF200A6789E /* Assets.xcassets */,
 				EE1D5C812C49BFF200A6789E /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1D5C7E2C49BFF000A6789E /* ContentView.swift in Sources */,
+				EE1D5C8A2C49C78400A6789E /* CardView.swift in Sources */,
+				EE1D5C8C2C49C7B100A6789E /* Card.swift in Sources */,
 				EE1D5C7C2C49BFF000A6789E /* FlashcardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
