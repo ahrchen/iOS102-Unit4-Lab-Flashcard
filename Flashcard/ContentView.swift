@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var createCardViewPresented = false
     @State private var deckId: Int = 0
+    
     @State private var cards: [Card] = Card.mockedCards
     
     @State private var cardsToPractice: [Card] = []
@@ -50,6 +52,15 @@ struct ContentView: View {
         }
         .id(deckId)
         .animation(.bouncy, value: cards)
+        .sheet(isPresented: $createCardViewPresented, content: {
+            Text("Create cards here...")
+        })
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .overlay(alignment: .topTrailing) { // <-- Add an overlay modifier with top trailing alignment for its contents
+            Button("Add Flashcard", systemImage: "plus") {  // <-- Add a button to add a flashcard
+                createCardViewPresented.toggle() // <-- Toggle the createCardViewPresented value to trigger the sheet to show
+            }
+        }
     }
 }
 
