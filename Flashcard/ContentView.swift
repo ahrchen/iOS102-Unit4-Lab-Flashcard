@@ -53,7 +53,9 @@ struct ContentView: View {
         .id(deckId)
         .animation(.bouncy, value: cards)
         .sheet(isPresented: $createCardViewPresented, content: {
-            Text("Create cards here...")
+            CreateFlashcardView { card in
+                cards.append(card)
+            }
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .overlay(alignment: .topTrailing) { // <-- Add an overlay modifier with top trailing alignment for its contents
